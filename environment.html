@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Commerce Website | Minor Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css" integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            box-sizing: border-box;
+        }
+        .Text{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.5));
+            text-align: center;
+            font-size: 80px;
+            border:1px groove black;
+            padding:20px 20px;
+            background-image: linear-gradient(rgba(255,0,0,0.5),rgba(0,0,255,0.5),rgba(0,255,0,0.5));
+            margin-top: 0;
+        }
+
+        .Search{
+            color:black;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .input-icon1{
+            position:absolute;
+        }
+        #search{
+            position: absolute;
+            border-radius: 15px 15px;
+            padding:5px 50px;
+            
+        }
+
+        #i1{
+            position: relative;
+            padding-left: 210px;
+        }
+
+        #i2{
+            position: relative;
+            padding-left: 15px;
+        }
+
+        #i3{
+            position: relative;
+            padding-left: 10px;
+        }
+
+
+        .Grid{
+            display:grid;
+            grid-template-columns: auto auto auto auto auto;
+            border:2px double grey;
+        }
+        .item{
+            background-color: black;
+            border:1px solid white;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            transition: 0.5s ease;
+        }
+
+        .item:hover{
+            filter:drop-shadow(5px 5px red);
+            transition: 0.5s ease;
+            opacity:0.8;
+        }
+
+        .About{
+            font-family: 'Times New Roman';
+            text-align: center;
+            font-weight:lighter;
+            font-size: 80px;
+        }
+
+        .grid1{
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+        }
+
+        .object1{
+           text-align: center;
+        }
+
+        .object2{
+            text-align: center;
+        }
+
+        .features{
+            margin-top:0;
+            font-family: 'Times New Roman';
+            text-align: center;
+            font-weight:lighter;
+            font-size: 80px;
+        }
+
+        .grid2{
+            display:grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        .obj{
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .team{
+            text-align: center;
+            font-size: 70px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .grid3{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            transition: 0.5s ease;
+        }
+
+        .sub{
+            padding: 20px;
+            text-align: center;   
+        }
+
+        #sub1:hover{
+            height: 500px;
+            width:400px;
+            filter:drop-shadow(7px 10px grey);
+            transition:0.6s ease-in-out;
+            transform:scale(1.1);
+        }
+
+        #sub2:hover{
+            height: 500px;
+            width:400px;
+            filter:drop-shadow(7px 10px grey);
+            transition:0.6s ease-in-out;
+            transform:scale(1.1);
+        }
+
+        #sub3:hover{
+            height: 500px;
+            width:400px;
+            filter:drop-shadow(7px 10px grey);
+            transition:0.6s ease-in-out;
+            transform:scale(1.1);
+        }
+
+        #sub4:hover{
+            height: 500px;
+            width:400px;
+            filter:drop-shadow(7px 10px grey);
+            transition:0.6s ease-in-out;
+            transform:scale(1.1);
+        }
+
+        .text1{
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text2{
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text3{
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .text4{
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .pic1{
+            font-size:30px;
+            font-weight: lighter;
+        }
+
+        .contactus{
+            text-align: center;
+            font-size: 70px;
+            font-weight: lighter;
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .grid4{
+            display:grid;
+            grid-template-columns: 50% 50%;
+            
+            text-align: center;
+        }
+
+        .det{
+            text-align: center;
+            padding: 80px;
+        }
+
+        .mail{
+            font-size: 30px;
+            font-family:  'Times New Roman', Times, serif;
+        }
+
+        .phone{
+            font-size: 30px;
+            font-family:  'Times New Roman', Times, serif;
+        }
+
+        .address{
+            font-size: 30px;
+            font-family:  'Times New Roman', Times, serif;
+        }
+
+        .mailto{
+            font-size: 20px;
+            opacity: 0.6;
+        }
+
+        .phoneto{
+            font-size: 20px;
+            opacity: 0.6;
+        }
+
+        .addressto{
+            font-size: 20px;
+            opacity: 0.6;
+        }
+
+        .info{
+            font-size: 40px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .grid5{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            text-align: center;
+            padding: 80px;
+        }
+
+        footer{
+            height:300px;
+            width:100%;
+            position: absolute;
+        }
+
+        .copy{
+            position: relative;
+            text-align: center;
+            padding-top: 250px;
+            color:white;
+        }
+            
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="input-icon1">
+                <label  class="Search">Search :&nbsp</label>
+                <input type="text" placeholder="Search"  id="search" value="search" style="border:1px solid black; padding-left: 5px;">
+                <i class="bi bi-search" id="i1"></i>
+                <i class="bi bi-heart" id="i2"></i>
+                <i class="bi bi-cart4" id="i3"></i>
+            </div>
+            
+            <a href="#" class="navbar-brand">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAc5JREFUSEu11MuLj2EUB/DPTGJsZOkyw0a5X4qFNAtF/gDMSHJJVnIJZUUuNU0IG0qi2cxCmbG1kZ2UhcXUpEjkkqWlFNGp59Wvd573976/MXM2T8/tfM853+85XWbZumbZv04ANuEY1uIJ7uBPXYBNAXbhKbpbHF7B5ZkAiCAmsA4X8D1F/wsr8aEdSJMMluMZfmJ9KssIjuAR9v8vQPF/Mb6lzVK8xzxsxusqkCYZVP29hvN4jh3TAViEU1iI4xkHC/AZse7Fdtwqc5LLYCtOp09z8BLbKiI8i5vpLiQ7F0H+P8sB7MQNhO7DvqI3AxDSvY6N6e4L+srvqjg4ioftIsMWnGvJ9AX6mwBEM4W2l6XO3YDb+FhRpoKr4OJEE4ADGMUbrKnr1Lr7coli/xYrMIjHdQ5a7qMnomSrcbA4LwOE3MLpZBoNHfi3JDVfT1JdqG/KNB3H7hRBlCln83EXIYSyRR+cwVCaW1MAxrAHFzGM3yUPqxBvYmSXsw/geziEq7iUy2BfGmC5Xom63keUoJ39SL3xLgcQZycTwYWmi0gPpwjbAXzCAF5VkVxHaigkeIq10aBs9KiEGrV+gOiXWpsOQK3THIEdferk8V8YjkgZqzsr3AAAAABJRU5ErkJggg==" height="60" alt="Brand Logo"  style="padding-left: 750px;"/>
+                
+            </a>
+            <h1>Noise Pollution</h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <div class="navbar-nav ms-auto">
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                        <div class="dropdown-menu">
+                            <a href="#about-us" class="dropdown-item">Company</a>
+                            <a href="#team" class="dropdown-item">Team</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="nav-item nav-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="Grid">
+        <div class="item">JOIN US</div>
+        <div class="item">Economic Crisis</div>
+        <div class="item">Events</div>
+        <div class="item">About us</div>
+        <div class="item">DONATE</div>
+    </div>
+    <h2 class="Text">Noise Pollution Website</h2>
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" ></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" ></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <!-- 0th Image -->
+            <div class="carousel-item active">
+                <img src="img1.jpeg" class="d-block w-100" alt="Carousel 1" style="max-height: 80vh;">
+            </div>
+            <!-- 1st Image -->
+            <div class="carousel-item">
+                <img src="img2new.png" class="d-block w-100" alt="Carousel 2" style="max-height: 80vh;">
+            </div>
+            <!-- 2nd Image -->
+            <div class="carousel-item">
+                <img src="img3.jpg" class="d-block w-100" alt="Carousel 3" style="max-height: 80vh;">
+            </div>  
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="About">Introduction</div>
+    <div class="grid1">
+        <div class="object1">
+            <a href="intro.jpg"><img src="intro.jpg" alt="img" width=70% height="90%" class="shirt"></a>
+        </div>
+        <div style="font-size: 20px;" class="object2">"Welcome to our digital sanctuary amidst the cacophony of modern life! Dive into the realm of noise pollution on our website,The traditional definition of noise is “unwanted or disturbing sound”.  Sound becomes unwanted when it either interferes with normal activities such as sleeping, conversation, or disrupts or diminishes one’s quality of life.  The fact that you can’t see, taste or smell it may help explain why it has not received as much attention as other types of pollution, such as air pollution, or water pollution.  The air around us is constantly filled with sounds, yet most of us would probably not say we are surrounded by noise.  Though for some, the persistent and escalating sources of sound can often be considered an annoyance.  This “annoyance” can have major consequences, primarily to one’s overall health.Noise pollution is one of several environmental pollutions across the world. It can be described as the propagation of noise with a harmful impact on the physiological and psychological lives of humans or animals"</div>
+    </div>
+
+    <div class="features">Unique Features</div>
+    <div class="grid2">
+        <div class="obj"><i class="bi bi-shield-shaded"></i><br><span style="font-size: 20px;">First Approach</span></div>
+        <div class="obj"><i class="bi bi-list"></i><br><span style="font-size: 20px;">Multiple Variations</span></div>
+        <div class="obj"><i class="bi bi-globe2"></i><br><span style="font-size: 20px;">Expanded All Over the World</span></div>
+    </div>
+
+    <div class="team">Get Inspired!</div>
+    <div class="grid3">
+        <div class="sub" ><a href="https://docs.google.com/forms/d/e/1FAIpQLSfkazTtyJImbBC8FmJriQ7pUc4tdkUsNZxpjcoVKCfG-3xDkg/viewform?usp=sf_link"><img src="g1.webp" width="400px" height="400px" id="sub1"></a><br><div class="text1" style="margin-top: 20px;">
+            Survey<br><div class="pic1"><i class="bi bi-instagram" style="padding: 5px;"></i>
+                <i class="bi bi-facebook" style="padding-right: 7px;"></i><i class="bi bi-linkedin" style="padding: 5px;"></i></div>
+        </div></div>
+        <div class="sub" ><a href="https://moef.gov.in/moef/rules-and-regulations/environment-protection/noise-pollution/index.html.tmp"><img src="pexels-education.webp" width="400px" height="400px" id="sub2"></a><br><div class="text2" style="margin-top: 20px;">
+            Noise Pollution Policies<br><div class="pic1"><i class="bi bi-instagram" style="padding: 5px;"></i><i class="bi bi-facebook" style="padding: 7px;">
+            </i><i class="bi bi-linkedin" style="padding-left: 1px;"></div></i>
+        </div></div>
+        <div class="sub" ><a href="https://www.cpcb.nic.in/noise-standards-rules/?&page_id=noise-standards-rules"><img src="resources.jpg" width="400px"  height="400px" id="sub3"></a><br><div class="text3" style="margin-top: 20px;">
+            Resources<br><div class="pic1"><i class="bi bi-instagram" style="padding: 5px;"></i>
+                <i class="bi bi-facebook" style="padding-right: 3px;"></i><i class="bi bi-linkedin" style="padding-left: 10px;"></i></div>
+        </div></div>
+        <div class="sub"><a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1909910"><img src="project1.jpg"  width="400px" height="400px" id="sub4"></a><br><div class="text4" style="margin-top: 20px;">
+             Noise Pollution Project<br><div class="pic1"><i class="bi bi-instagram" style="padding-right: 1px;"></i>
+                <i class="bi bi-facebook" style="padding: 5px;"></i><i class="bi bi-linkedin" style="padding-left: 7px;"></i></div>
+        </div></div>
+    </div>
+
+    <div class="contactus">Contact Us</div>
+    <div class="grid4">
+        <div class="det"><p class="info">Here's our Contact Info</p><br>
+        <span class="mail">Our Email</span><br>
+        <span class="mailto">support@noise-pollution.com</span><br>
+        <span class="phone">Our Phone No.</span><br>
+        <span class="phoneto">+91 85658 98563</span><br>
+        <span class="address">Our Address</span><br>
+        <span class="addressto">HSR Layout, Bangalore <br> Karnatake 560 XXX</span>
+        </div>
+        <div class="det"><p class="info">You can also Write to Us</p>
+            <form class="form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Enter Your Name</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="emailid" class="form-label">Enter Your Email</label>
+                    <input type="email" class="form-control" name="email" id="emailid">
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="form-label">Enter the subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Enter Your Message</label>
+                    <textarea class="form-control" name="message" id="message"></textarea>
+                </div>
+                <div class="form-group text-center" style="padding-top: 20px;">                                               
+                    <input type="submit" class="btn btn-outline-dark" value="Send Message">
+                </div>
+            </form>
+        </div>
+    </div>
+                             
+                    
+    
+<footer class="bg-dark">
+    <div class="grid5">
+        <div class="count1">
+            <img src="symb.jpg" height="30px" class="bg-white">
+            <p class="text-white">"In closing, let us celebrate the interconnectedness of life—the dance of forests, the whispers of rivers, and the resilience of communities. Sustainable development isn’t a destination; it’s a journey we embark upon, hand in hand, toward a thriving Earth.
+
+                🌎 Let’s be stewards, not just beneficiaries. Together, we can turn the tide toward a brighter, greener future."
+            </p>
+        </div>
+        <div class="count1 style="padding-left: 100px;">
+            <p class="text-white fs-5">Quick Links</p>
+            <ul>
+                <li><a  href="#" class="remove-text-decoration text-white">About Us</a></li>
+                <li><a href="#" class="remove-text-decoration text-white">Contact Us</a></li>
+                <li><a href="#" class="remove-text-decoration text-white">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<p class="copy">All rights reserved &copy 2022, <a href="#">noise-pollution.com</a></p>
+   
+
+    <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+</body>
+</html>
